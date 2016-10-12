@@ -1,0 +1,9 @@
+<div class="container">
+<%= simple_form_for @story do |s| %>
+    <%= s.input :title %>
+    <%= s.input :story, as: :text %>
+    <%= s.input :quote %>
+    <%= s.input :author %>
+    <%= s.submit %>
+<% end %>
+</div>

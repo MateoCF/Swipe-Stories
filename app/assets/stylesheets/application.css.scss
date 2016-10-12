@@ -1,0 +1,82 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require normalize
+*= require skeleton
+*/
+@import "jTinder";
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+body {
+    min-height: 100%;
+    background: image-url("OtherCanada-min.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+img {
+    width: 150px;
+    left: calc( 50% - 75px);
+    top: 20px;
+    display: block;
+    position: absolute;
+    z-index: 3;
+}
+nav {
+    width: calc(100% - 20px);
+    height: 10%;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background: #fff;
+    z-index: 3;
+    -webkit-box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 40px -5px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    section {
+        width: 20%;
+        height: 100%;
+        overflow: hidden;
+        display: inline-block;
+        margin: 0;
+        float: left;
+        // border-top: 1px solid black;
+        // border-right: 1px solid black;
+    }
+    section:first-child {
+        // border-left: 1px black solid;
+    }    
+    section:nth-child(3) {
+        // border-top: none;
+    }
+    section:nth-child(4) { /*Spooky One (has curved top) */
+        display:none;
+    
+        background: inherit;
+        color: white;
+        width: calc(25%);
+        transform: translate(-50%, -21%);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        z-index: -2;
+        // border: 1px solid black;
+    }
+}

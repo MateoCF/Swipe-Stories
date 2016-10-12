@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700" rel="stylesheet">
+</head>
+<body>
+<% if flash[:notice] || flash[:alert] %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<% end %>
+<%= image_tag("Stories.png") %>
+<nav>
+  <section><%= link_to 'Me', edit_user_registration_path %></section>
+  <section></section>
+  <section><%= link_to 'New', new_story_path %></section>
+  <section>INVISIBLE SECTION W/ STYLES</section>
+  <section></section>
+  <section><%= link_to 'Logout', destroy_user_session_path, method: :delete %></section>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

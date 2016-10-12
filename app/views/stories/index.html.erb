@@ -1,0 +1,30 @@
+<div class="wrap container">
+    <div id="tinderslide">
+        <ul>
+            <% @stories.each do |s| %>
+                <li class="pane<%= s.id %>">
+                    <div class="tcard">
+                    <div class="title">
+                        <h4><%= s.title %></h4>
+                        <span class="rating">Yas</span>
+                        <span class="rating">Nas</span>
+                        <div class="author">Author: <h5><%= s.author %></h5></div>
+                    </div>
+                    <div class="story"><%= s.story %></div>
+                    <div class="buttonct">
+                        <%= link_to 'Destroy', s, method: :delete, confirm: 'Are you sure?', class: "button"  %>
+                        <%= link_to 'Edit', edit_story_path(s), class: "button" %>
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
+
+<script type="javascript">
+$("#tinderslide").jTinder({
+	animationRevertSpeed: 200,
+	animationSpeed: 100,
+});
+</script>
+<script>$("#tinderslide").jTinder();</script>

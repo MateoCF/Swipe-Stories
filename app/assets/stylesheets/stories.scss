@@ -1,0 +1,44 @@
+// Place all the styles related to the stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrap {
+    height: 100%;
+        .tcard {
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            margin-top: 80px;
+            margin-bottom: 100px;
+            overflow: auto;
+            height: 100%;
+            background: #fff;
+        .title {
+            color: #555;
+            font-weight: bold;
+            display: block;
+            border-bottom: 1px solid black;
+            margin-bottom: 5px;
+            h4 {
+                margin: 0 0 5px 0;
+                display: inline;
+            }
+            .rating {
+                float: right;
+                margin: 0 5px;
+            }
+            .author {
+                font-size: 20px;
+                h5 {
+                    display: inline;
+                }
+            }
+        }
+        .story {
+            color: black;
+        }
+        .buttonct {
+            margin: 12px 0 -10px 0;
+        }
+    }
+}
